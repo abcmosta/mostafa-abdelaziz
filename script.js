@@ -4,19 +4,17 @@ document.addEventListener("DOMContentLoaded", () => {
        1. TYPEWRITER EFFECT
     ================================== */
     const typeWriterElement = document.getElementById('typewriter');
-    const textToType = "E-Commerce ICQA | Logistics & Fulfillment Supervisor";
+    const textToType = "Data-Driven Logistics & AI Automation";
     let charIndex = 0;
     
     function typeWriter() {
         if (charIndex < textToType.length) {
             typeWriterElement.innerHTML += textToType.charAt(charIndex);
             charIndex++;
-            // Randomize typing speed slightly for realism
             setTimeout(typeWriter, Math.random() * 50 + 50); 
         }
     }
     
-    // Start typing after a short delay
     setTimeout(typeWriter, 500);
 
     /* ==================================
@@ -33,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
-                observer.unobserve(entry.target); // Run once
+                observer.unobserve(entry.target);
             }
         });
     }, revealOptions);
@@ -41,45 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
     revealElements.forEach(el => revealObserver.observe(el));
 
     /* ==================================
-       3. ANIMATED COUNTERS (ACHIEVEMENTS)
-    ================================== */
-    const counters = document.querySelectorAll('.counter');
-    let hasCounted = false;
-
-    const counterObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting && !hasCounted) {
-                counters.forEach(counter => {
-                    const target = +counter.getAttribute('data-target');
-                    const start = +counter.getAttribute('data-start'); // For counting down
-                    const duration = 2000; // ms
-                    const increment = (start - target) / (duration / 16); // 60fps
-                    let current = start;
-
-                    const updateCounter = () => {
-                        current -= increment;
-                        if (current > target) {
-                            counter.innerText = Math.ceil(current);
-                            requestAnimationFrame(updateCounter);
-                        } else {
-                            counter.innerText = target;
-                        }
-                    };
-                    updateCounter();
-                });
-                hasCounted = true; // Prevent running again
-                observer.disconnect();
-            }
-        });
-    }, { threshold: 0.5 });
-
-    const achievementsSection = document.getElementById('achievements');
-    if (achievementsSection) {
-        counterObserver.observe(achievementsSection);
-    }
-
-    /* ==================================
-       4. NAVBAR SCROLL SPY & STYLING
+       3. NAVBAR SCROLL SPY & STYLING
     ================================== */
     const sections = document.querySelectorAll('section');
     const navLinksList = document.querySelectorAll('.nav-link');
@@ -88,7 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener('scroll', () => {
         let current = '';
         
-        // Add subtle shadow to navbar on scroll
         if (window.scrollY > 50) {
             navbar.style.boxShadow = "0 4px 30px rgba(0, 0, 0, 0.5)";
         } else {
@@ -112,18 +71,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     /* ==================================
-       5. MOBILE MENU TOGGLE
+       4. MOBILE MENU TOGGLE
     ================================== */
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.querySelector('.nav-links');
 
     hamburger.addEventListener('click', () => {
         navLinks.classList.toggle('nav-active');
-        // Simple hamburger animation
-        hamburger.classList.toggle('toggle');
     });
 
-    // Close menu when clicking a link
     navLinksList.forEach(link => {
         link.addEventListener('click', () => {
             navLinks.classList.remove('nav-active');

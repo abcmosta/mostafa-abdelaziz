@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mostafa Abdelaziz | Operations & Supply Chain</title>
+    <title>Mostafa Abdelaziz | Operations, Data & AI</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -17,9 +17,10 @@
             <a href="#hero" class="logo">MA.</a>
             <ul class="nav-links">
                 <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Work & Process</a></li>
                 <li><a href="#experience" class="nav-link">Experience</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="#resume" class="nav-link">Resume</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="hamburger" id="hamburger">
@@ -32,15 +33,29 @@
 
     <section id="hero" class="hero section">
         <div class="container hero-content reveal">
-            <p class="greeting">Hello, I am</p>
-            <h1 class="name">Mostafa Abdelaziz</h1>
-            <h2 class="title">
-                <span id="typewriter"></span><span class="cursor">|</span>
-            </h2>
-            <p class="hero-desc">Data-driven operations professional optimizing supply chains and ensuring flawless quality assurance.</p>
-            <div class="hero-cta">
-                <a href="#contact" class="btn btn-primary">Get in Touch</a>
-                <a href="#experience" class="btn btn-secondary">View My Work</a>
+            <div class="hero-text">
+                <p class="greeting">Hello, I am</p>
+                <h1 class="name">Mostafa Abdelaziz</h1>
+                <h2 class="title">
+                    <span id="typewriter"></span><span class="cursor">|</span>
+                </h2>
+                <p class="hero-desc">I am an Operations & Supply Chain professional focused on data-driven inventory control, AI automation, and quality assurance. I specialize in bridging the gap between complex logistical challenges and scalable, system-driven solutions.</p>
+                
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">See My Process</a>
+                    <a href="Mostafa Abdelaziz-Resume_.pdf" target="_blank" class="btn btn-secondary">Download CV</a>
+                </div>
+
+                <div class="social-links mt-4">
+                    <a href="https://www.linkedin.com/in/abcmosta/" target="_blank" class="social-icon">LinkedIn</a>
+                    <a href="https://x.com/mostafa_no101" target="_blank" class="social-icon">X (Twitter)</a>
+                    <a href="https://www.instagram.com/mostafa.no101/" target="_blank" class="social-icon">Instagram</a>
+                    <a href="https://www.tumblr.com/mostafa4saad-blog" target="_blank" class="social-icon">Tumblr</a>
+                </div>
+            </div>
+            
+            <div class="hero-image-container">
+                <img src="1743699055863.jpg" alt="Mostafa Abdelaziz" class="profile-img">
             </div>
         </div>
     </section>
@@ -50,8 +65,80 @@
             <h2 class="section-title">About Me</h2>
             <div class="glass-card about-card">
                 <p>
-                    Results-driven operations and supply chain professional with a proven track record at Amazon and Instashop. Highly skilled in inventory control, quality assurance, and data-driven process optimization. I bridge the gap between complex logistical challenges and streamlined, scalable solutions.
+                    I am a Subject Matter Expert (SME) specializing in eCommerce fulfillment, inventory accuracy, and workflow automation. With a strong foundation at Amazon and Instashop, my expertise lies in identifying root-cause operational bottlenecks and deploying SQL, ETL pipelines, and AI to solve them. I don't just track metrics—I engineer the systems that optimize them.
                 </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title reveal">Selected Work & Process</h2>
+            
+            <div class="project-grid">
+                <div class="glass-card project-card reveal">
+                    <div class="project-header">
+                        <h3>ERDR DPMO Optimization</h3>
+                        <span class="metric-badge">530K ➔ 285K DPMO</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="process-step">
+                            <h4>The Problem</h4>
+                            <p>Virtual-physical mismatches on expiry records in Amazon's AFT system due to vendor non-compliance (mixed expirations) and human error at receive stations.</p>
+                        </div>
+                        <div class="process-step">
+                            <h4>My Process</h4>
+                            <p>Existing software couldn't pinpoint root causes. I bypassed it by designing an Excel architecture 100% reliant on custom SQL database queries to extract exact defect injection points, ensuring a strictly data-driven action plan.</p>
+                        </div>
+                        <div class="process-step">
+                            <h4>The Solution</h4>
+                            <p>Implemented proactive floor practices, established strict expiry audits, and scheduled random strange-area audits on expirable products to intercept defects before they impacted the DPMO metric.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card project-card reveal">
+                    <div class="project-header">
+                        <h3>IRDR Metric Control</h3>
+                        <span class="metric-badge">26% ➔ 3% Defects</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="process-step">
+                            <h4>The Problem</h4>
+                            <p>High Inventory Records Defect Rate (IRDR) where physical warehouse quantities failed to match virtual system records, causing fulfillment delays.</p>
+                        </div>
+                        <div class="process-step">
+                            <h4>My Process</h4>
+                            <p>I engineered 3 different ETL (Extract, Transform, Load) jobs with multiple SQL queries. This allowed me to track the exact traffic and associate behaviors causing inventory deviations.</p>
+                        </div>
+                        <div class="process-step">
+                            <h4>The Solution</h4>
+                            <p>Targeted the root cause by scheduling automated, routine cycle counts specifically directed at the highly-defective bins identified by the ETL pipelines.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card project-card reveal">
+                    <div class="project-header">
+                        <h3>AI Automation & SEO Content</h3>
+                        <span class="metric-badge">Talabat & Instashop</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="process-step">
+                            <h4>The Problem</h4>
+                            <p>Catalogue creation was entirely manual, causing bottlenecks in onboarding new products and inconsistent bilingual SEO optimization.</p>
+                        </div>
+                        <div class="process-step">
+                            <h4>My Process</h4>
+                            <p>Translated informal Instashop guidelines into strict prompt instructions for AI engines. Leveraged SEMrush and internal tagging to identify high-converting keywords for products and their complementaries.</p>
+                        </div>
+                        <div class="process-step">
+                            <h4>The Solution</h4>
+                            <p>Built robust automated workflows using Zapier and Make AI to process products and autonomously generate highly-researched, SEO-optimized titles in both English and Egyptian Arabic.</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -64,53 +151,35 @@
                 <div class="timeline-item reveal">
                     <div class="timeline-dot"></div>
                     <div class="glass-card timeline-content">
-                        <h3>ICQA Program Manager</h3>
+                        <h3>ICQA Program Manager & Supervisor</h3>
                         <h4 class="company">Amazon</h4>
-                        <span class="date">2025</span>
+                        <span class="date">2023 – 2025</span>
                     </div>
                 </div>
 
                 <div class="timeline-item reveal">
                     <div class="timeline-dot"></div>
                     <div class="glass-card timeline-content">
-                        <h3>ICQA Supervisor</h3>
-                        <h4 class="company">Amazon</h4>
-                        <span class="date">2023 – 2024</span>
-                    </div>
-                </div>
-
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="glass-card timeline-content">
-                        <h3>Catalogue Specialist</h3>
+                        <h3>Catalogue Specialist & QA Coordinator</h3>
                         <h4 class="company">Instashop</h4>
-                        <span class="date">Present</span>
+                        <span class="date">2023 – Present</span>
                     </div>
                 </div>
 
                 <div class="timeline-item reveal">
                     <div class="timeline-dot"></div>
                     <div class="glass-card timeline-content">
-                        <h3>QA Coordinator</h3>
-                        <h4 class="company">Instashop</h4>
-                        <span class="date">2023</span>
-                    </div>
-                </div>
-
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="glass-card timeline-content">
-                        <h3>SDS Specialist</h3>
+                        <h3>SDS Specialist (Claims & Escalations)</h3>
                         <h4 class="company">Amazon</h4>
-                        <span class="date">2022 – 2023</span>
+                        <span class="date">2021 – 2023</span>
                     </div>
                 </div>
 
                 <div class="timeline-item reveal">
                     <div class="timeline-dot"></div>
                     <div class="glass-card timeline-content">
-                        <h3>Technical Support</h3>
-                        <h4 class="company">Vodafone</h4>
+                        <h3>Technical Support Agent</h3>
+                        <h4 class="company">Vodafone Egypt</h4>
                         <span class="date">2020 – 2021</span>
                     </div>
                 </div>
@@ -121,49 +190,35 @@
 
     <section id="skills" class="section">
         <div class="container reveal">
-            <h2 class="section-title">Core Competencies</h2>
+            <h2 class="section-title">Toolkit & Expertise</h2>
             <div class="skills-container">
-                <div class="skill-tag">Supply Chain</div>
+                <div class="skill-tag highlight">SQL</div>
+                <div class="skill-tag highlight">ETL Pipelines</div>
+                <div class="skill-tag highlight">AI Automation Analytics</div>
+                <div class="skill-tag highlight">Amazon QuickSight</div>
+                <div class="skill-tag">Zapier / Make AI</div>
+                <div class="skill-tag">SEMrush</div>
+                <div class="skill-tag">Subject Matter Expert (SME)</div>
                 <div class="skill-tag">Inventory Control</div>
-                <div class="skill-tag">SQL</div>
-                <div class="skill-tag">Data Analysis</div>
+                <div class="skill-tag">Supply Chain Management</div>
                 <div class="skill-tag">Lean Methodologies</div>
-                <div class="skill-tag">Process Improvement</div>
-                <div class="skill-tag">VBA</div>
-                <div class="skill-tag">Stakeholder Management</div>
+                <div class="skill-tag">SEO & Content Optimization</div>
+                <div class="skill-tag">Bilingual Translation (EN/AR)</div>
+                <div class="skill-tag">Advanced Excel & VBA</div>
+                <div class="skill-tag">Google Sheets & Docs</div>
+                <div class="skill-tag">PowerPoint & Slides</div>
+                <div class="skill-tag">Word</div>
             </div>
         </div>
     </section>
 
-    <section id="achievements" class="section">
-        <div class="container">
-            <h2 class="section-title reveal">Key Achievements</h2>
-            <div class="grid-3">
-                
-                <div class="glass-card achievement-card reveal">
-                    <div class="metric">
-                        <span class="counter" data-target="285" data-start="530">530</span><span class="suffix">K</span>
-                    </div>
-                    <h3>ERDR DPMO Reduction</h3>
-                    <p>Successfully reduced DPMO from 530K down to 285K through targeted quality control initiatives.</p>
-                </div>
-
-                <div class="glass-card achievement-card reveal">
-                    <div class="metric">
-                        <span class="counter" data-target="3" data-start="26">26</span><span class="suffix">%</span>
-                    </div>
-                    <h3>Defect Rate Dropped</h3>
-                    <p>Optimized process adherence to slash systemic defects from 26% down to a record 3%.</p>
-                </div>
-
-                <div class="glass-card achievement-card reveal">
-                    <div class="metric">
-                        <span class="icon">🚀</span>
-                    </div>
-                    <h3>APMT Optimization</h3>
-                    <p>Drove significant improvements in APMT performance, boosting overall fulfillment throughput.</p>
-                </div>
-
+    <section id="resume" class="section">
+        <div class="container reveal">
+            <h2 class="section-title">Resume</h2>
+            <div class="glass-card resume-card">
+                <h3>Want the full breakdown?</h3>
+                <p>Download my official resume to see my comprehensive work history, education at Helwan University, and full technical background.</p>
+                <a href="Mostafa Abdelaziz-Resume_.pdf" target="_blank" class="btn btn-primary mt-4">📄 Download Resume (PDF)</a>
             </div>
         </div>
     </section>
@@ -172,8 +227,9 @@
         <div class="container reveal">
             <h2 class="section-title">Let's Connect</h2>
             <div class="glass-card contact-card">
-                <p>I am always open to discussing supply chain optimizations, fulfillment strategies, or new opportunities.</p>
+                <p>I am currently open to discussing new opportunities in supply chain optimization, data analytics, and operational leadership.</p>
                 <a href="mailto:mostafasad007@gmail.com" class="email-link">mostafasad007@gmail.com</a>
+                <p class="phone-link">+20 111 851 2038</p>
                 <a href="mailto:mostafasad007@gmail.com" class="btn btn-primary mt-4">Send an Email</a>
             </div>
         </div>
