@@ -1,27 +1,27 @@
 document.addEventListener("DOMContentLoaded", () => {
-    
+
     /* ==================================
        1. TYPEWRITER EFFECT
     ================================== */
     const typeWriterElement = document.getElementById('typewriter');
-    const textToType = "Data-Driven Logistics & AI Automation";
+    const textToType = "Retail & Supply-Chain Analytics Manager";
     let charIndex = 0;
-    
+
     function typeWriter() {
-        if (charIndex < textToType.length) {
+        if (typeWriterElement && charIndex < textToType.length) {
             typeWriterElement.innerHTML += textToType.charAt(charIndex);
             charIndex++;
-            setTimeout(typeWriter, Math.random() * 50 + 50); 
+            setTimeout(typeWriter, Math.random() * 45 + 50);
         }
     }
-    
+
     setTimeout(typeWriter, 500);
 
     /* ==================================
        2. SCROLL REVEAL ANIMATIONS
     ================================== */
     const revealElements = document.querySelectorAll('.reveal');
-    
+
     const revealOptions = {
         threshold: 0.15,
         rootMargin: "0px 0px -50px 0px"
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.addEventListener('scroll', () => {
         let current = '';
-        
+
         if (window.scrollY > 50) {
             navbar.style.boxShadow = "0 4px 30px rgba(0, 0, 0, 0.5)";
         } else {
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
-            if (scrollY >= (sectionTop - sectionHeight / 3)) {
+            if (window.scrollY >= (sectionTop - sectionHeight / 3)) {
                 current = section.getAttribute('id');
             }
         });
@@ -76,13 +76,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.querySelector('.nav-links');
 
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('nav-active');
-    });
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('nav-active');
+        });
+    }
 
     navLinksList.forEach(link => {
         link.addEventListener('click', () => {
-            navLinks.classList.remove('nav-active');
+            if (navLinks) navLinks.classList.remove('nav-active');
         });
     });
 });
